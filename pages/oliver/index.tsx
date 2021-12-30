@@ -1,6 +1,6 @@
 import type { NextPageWithLayout } from "pages/_app";
 import { Typography, Card, Box, useTheme } from "@mui/material";
-import Run3DSpace from "src/3d/oliver3d";
+import { startAnimating, stopAnimating } from "src/3d/oliver3d";
 import { ReactElement, useEffect } from "react";
 import { styled } from "@mui/system";
 import OliverLayout from "components/Layouts/OliverLayout";
@@ -24,9 +24,10 @@ const Oliver: NextPageWithLayout = () => {
     canvas.style.bottom = "0";
     canvas.style.right = "0";
     document.body.appendChild(canvas);
-    Run3DSpace(canvas);
+    startAnimating(canvas);
     return function cleanup() {
       canvas.remove();
+      stopAnimating();
     };
   }, []);
   const theme = useTheme();

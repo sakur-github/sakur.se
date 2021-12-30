@@ -2,7 +2,14 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { Vector3 } from "three";
 
-const Run3DSpace = (canvas: Element) => {
+let animating = true;
+
+export const stopAnimating = () => {
+  animating = false;
+};
+
+export const startAnimating = (canvas: Element) => {
+  animating = true;
   const isDesktop = window.innerWidth > 768;
   let mixer = new THREE.AnimationMixer(new THREE.Object3D());
   const clock = new THREE.Clock();
@@ -141,14 +148,13 @@ const Run3DSpace = (canvas: Element) => {
   );
 
   function animate() {
-    requestAnimationFrame(animate);
-    if (oliver) {
-      renderer.render(scene, camera);
-      mixer.update(clock.getDelta());
+    if (animating) {
+      requestAnimationFrame(animate);
+      if (oliver) {
+        renderer.render(scene, camera);
+        mixer.update(clock.getDelta());
+      }
     }
   }
-
   animate();
 };
-
-export default Run3DSpace;
