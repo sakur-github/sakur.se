@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { Vector3 } from "three";
 
-const Run3DSpace = () => {
+const Run3DSpace = (canvas: Element) => {
   const isDesktop = window.innerWidth > 768;
   let mixer = new THREE.AnimationMixer(new THREE.Object3D());
   const clock = new THREE.Clock();
@@ -61,8 +61,6 @@ const Run3DSpace = () => {
       pivot.position.lerp(new Vector3(0, 0, 0), 0.1);
     }
   });
-
-  const canvas = document.querySelector("#canvas3d") as Element;
 
   const renderer = new THREE.WebGL1Renderer({
     alpha: true,
