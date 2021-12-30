@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "components/Link";
-import Layout from "components/Layouts/Layout";
+import Layout from "components/Layout";
 import { Typography, Stack, Card, Button } from "@mui/material";
 import { styled } from "@mui/system";
 import OliverAvatar from "components/OliverAvatar";

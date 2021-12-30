@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Layout from "components/Layouts/Layout";
-import { Typography, Stack, useTheme, Tabs, Tab } from "@mui/material";
-import Social from "components/Oliver/Social";
+import Layout from "components/Layout";
+import { Typography, Stack, Tabs, Tab } from "@mui/material";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Social from "./Social";
 
 const OliverLayout = ({
   children,
@@ -27,7 +27,6 @@ const OliverLayout = ({
       router.push("/oliver/projects");
     }
   }, [activeTab]);
-  const theme = useTheme();
 
   return (
     <Layout title="Oliver">
@@ -35,7 +34,7 @@ const OliverLayout = ({
         <title>Oliver | Sakur</title>
       </Head>
       <Stack spacing={1}>
-        <Typography variant="h2">Web Developer</Typography>
+        <Typography variant="h2">Fullstack Developer</Typography>
 
         <Social />
         <Link href="mailto:oliver@sakur.se">oliver@sakur.se</Link>

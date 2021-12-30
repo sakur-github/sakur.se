@@ -1,15 +1,8 @@
 import type { NextPageWithLayout } from "pages/_app";
-import { Typography, Card, Box, useTheme } from "@mui/material";
-import { ReactElement, useEffect } from "react";
+import { Typography, Card, useTheme } from "@mui/material";
+import { ReactElement } from "react";
 import { styled } from "@mui/system";
-import OliverLayout from "components/Layouts/OliverLayout";
-
-const MyCard = styled(Card)`
-  padding: 2rem;
-  p {
-    margin: 1rem 0;
-  }
-`;
+import OliverLayout from "components/Oliver/Layout";
 
 const Oliver: NextPageWithLayout = () => {
   const theme = useTheme();
@@ -26,6 +19,7 @@ const Oliver: NextPageWithLayout = () => {
         I have participated in a lot of different projects over the years.
         Here's a selection.
       </Typography>
+      <Typography>#COMING SOON</Typography>
     </>
   );
 };

@@ -3,7 +3,7 @@ import { Typography, Card, Box, useTheme } from "@mui/material";
 import { startAnimating, stopAnimating } from "src/3d/oliver3d";
 import { ReactElement, useEffect } from "react";
 import { styled } from "@mui/system";
-import OliverLayout from "components/Layouts/OliverLayout";
+import OliverLayout from "components/Oliver/Layout";
 
 const MyCard = styled(Card)`
   max-width: 30rem;
