@@ -35,7 +35,7 @@ const Oliver: NextPageWithLayout = () => {
     backgroundColor:
       theme.palette.mode === "light"
         ? "rgba(255, 255, 255, 0.6)"
-        : "rgba(0, 0, 0, 0.6)",
+        : "rgba(18, 18, 18, 0.6)",
   };
   return (
     <>
