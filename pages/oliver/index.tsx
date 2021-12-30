@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPageWithLayout } from "pages/_app";
 import { Typography, Card, Box, useTheme } from "@mui/material";
 import Run3DSpace from "src/3d/oliver3d";
 import { ReactElement, useEffect } from "react";
@@ -17,7 +17,7 @@ const Separator = styled(Box)`
   min-height: 100vh;
 `;
 
-const Oliver: NextPage = () => {
+const Oliver: NextPageWithLayout = () => {
   useEffect(() => {
     const canvas = document.createElement("canvas");
     canvas.style.position = "fixed";

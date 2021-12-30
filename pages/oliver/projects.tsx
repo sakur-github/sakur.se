@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPageWithLayout } from "pages/_app";
 import { Typography, Card, Box, useTheme } from "@mui/material";
 import { ReactElement, useEffect } from "react";
 import { styled } from "@mui/system";
@@ -11,7 +11,7 @@ const MyCard = styled(Card)`
   }
 `;
 
-const Oliver: NextPage = () => {
+const Oliver: NextPageWithLayout = () => {
   const theme = useTheme();
   const cardStyle = {
     backgroundColor:
